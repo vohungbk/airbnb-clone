@@ -4,20 +4,20 @@ A full-stack Airbnb clone built with Next.js, React, and Tailwind CSS, featuring
 
 ## 🚀 Features
 
-🔐 Authentication – Secure login & signup with OAuth support
-🏠 Property Listings – Users can list, edit, and delete their properties
-📅 Booking System – Date selection with availability checks
-💳 Payments – Secure checkout integration (Stripe or other)
-🌍 Interactive Map – Browse listings with dynamic location markers
-🎨 Responsive UI – Fully mobile-friendly with Tailwind CSS
+🔐 Authentication – Secure login & signup with OAuth support </br>
+🏠 Property Listings – Users can list, edit, and delete their properties </br>
+📅 Booking System – Date selection with availability checks </br>
+💳 Payments – Secure checkout integration (Stripe or other) </br>
+🌍 Interactive Map – Browse listings with dynamic location markers </br>
+🎨 Responsive UI – Fully mobile-friendly with Tailwind CSS </br>
 
 ## 🛠 Tech Stack
 
-Frontend: Next.js, React, Tailwind CSS
-Backend: Next.js API routes, Supabase
-Database: Prisma
-Authentication: NextAuth.js
-Payments: Stripe
+Frontend: Next.js, React, Tailwind CSS </br>
+Backend: Next.js API routes, Supabase </br>
+Database: Prisma </br>
+Authentication: NextAuth.js </br>
+Payments: Stripe </br>
 
 ## 📦 Installation
 
