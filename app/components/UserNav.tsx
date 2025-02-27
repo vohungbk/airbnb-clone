@@ -2,6 +2,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
@@ -12,12 +13,12 @@ import {
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { MenuIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 async function UserNav() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  console.log(user);
 
   return (
     <DropdownMenu>
@@ -39,6 +40,16 @@ async function UserNav() {
       <DropdownMenuContent align="end" className="w-[200px]">
         {user ? (
           <>
+            <DropdownMenuItem>
+              <Link href="/my-homes">My Listing</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href="/favorites">My Favorites</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href="/reservations">My Reservations</Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogoutLink className="w-full">Logout</LogoutLink>
             </DropdownMenuItem>
