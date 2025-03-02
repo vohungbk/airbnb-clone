@@ -15,10 +15,15 @@ import { MenuIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { createAirbnb } from '../actions';
 
 async function UserNav() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
+
+  const handleCreateAirbnbHome = createAirbnb.bind(null, {
+    userId: user.id,
+  });
 
   return (
     <DropdownMenu>
@@ -40,6 +45,13 @@ async function UserNav() {
       <DropdownMenuContent align="end" className="w-[200px]">
         {user ? (
           <>
+            <DropdownMenuItem>
+              <form className="w-full" action={handleCreateAirbnbHome}>
+                <button type="submit" className="w-full text-start">
+                  Airbnb your Home
+                </button>
+              </form>
+            </DropdownMenuItem>
             <DropdownMenuItem>
               <Link href="/my-homes">My Listing</Link>
             </DropdownMenuItem>
